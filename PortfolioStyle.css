@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#portfolioHeader {
+    background-image: url(assests/F0454F5D-0309-4955-8B20-60817F52E1D9.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    text-align: center;
+    width: 100%;
+    padding: 20vh 0px;
+}
+
+#headerName {
+    font-size: 40px;
+}
+#headerDescription {
+    font-size: 20px;
+}
+#Navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(180, 180, 180);
+    align-items: center;
+    color: ivory;
+}
+#homeButton {
+    font-size: larger;
+    padding: 5px;
+    margin: 10px;
+    background-color: rgb(155, 153, 153);
+    border: solid darkgray 2px;
+    border-radius: 5px;
+}
+#homeButton:hover {
+    background-color: grey;
+}
+.navbarLinks ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbarLinks li {
+    list-style: none;
+}
+.navbarLinks li a {
+    text-decoration: none;
+    color: ivory;
+    padding: 1rem;
+    display: block;
+}
+.navbarLinks li:hover {
+    background-color: grey;
+}
+#toggleButton {
+    position: absolute;
+    top: 32vh;
+    right: 1rem;
+    display: none;
+    flex-direction: column; 
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+}
+#toggleButton .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.projectColumn {
+    width: 50%;
+    float: left;
+}
+
+
+@media screen and (max-width: 800px) {
+    #portfolioHeader {
+        padding: 12vh 0px;
+    }
+    #headerName {
+        font-size: 32px;
+    }
+    #toggleButton {
+        display: flex;
+    }
+    .navbarLinks {
+        display: none;
+        width: 100%;
+        background-color: rgb(158, 154, 154);
+    }
+    #Navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbarLinks ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbarLinks li {
+        text-align: center;
+    }
+    .navbarLinks li a {
+        padding: 0.5rem 1rem;
+    }
+    .navbarLinks.active {
+        display: flex;
+    }
+    #headerDescription {
+        font-size: 18px;
+    }
+    .projectColumn {
+        width: 100%;
+    }
+}
