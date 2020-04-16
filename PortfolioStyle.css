@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    background-color: rgb(229, 226, 226);
+}
+/* Header */
 #portfolioHeader {
     background-image: url(assests/F0454F5D-0309-4955-8B20-60817F52E1D9.jpg);
     background-repeat: no-repeat;
@@ -19,6 +22,8 @@
 #headerDescription {
     font-size: 20px;
 }
+
+/* Navbar */
 #Navbar {
     display: flex;
     justify-content: space-between;
@@ -28,6 +33,8 @@
 }
 #homeButton {
     font-size: larger;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
     padding: 5px;
     margin: 10px;
     background-color: rgb(155, 153, 153);
@@ -56,7 +63,7 @@
 }
 #toggleButton {
     position: absolute;
-    top: 32vh;
+    top: 33vh;
     right: 1rem;
     display: none;
     flex-direction: column; 
@@ -70,19 +77,51 @@
     background-color: white;
     border-radius: 10px;
 }
+
+/* About me */
+#About {
+    margin: 10px;
+}
+#aboutHeader {
+    font-size: 22px;
+    padding: 15px 15px 15px 100px;
+    font-weight: 600;
+}
+#aboutImg {
+    padding: 0px 15px 15px 15px;
+    float: left;
+    overflow: auto;
+}
+#aboutInfo {
+    padding-right: 15px;
+}
+
+/* Projects */
+#Projects {
+    background-color: hotpink;
+}
 .projectColumn {
     width: 50%;
     float: left;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+/* Contact */
 
 @media screen and (max-width: 800px) {
+    /*Header*/
     #portfolioHeader {
         padding: 12vh 0px;
     }
     #headerName {
         font-size: 32px;
     }
+    /*Navbar*/
     #toggleButton {
         display: flex;
     }
@@ -113,5 +152,9 @@
     }
     .projectColumn {
         width: 100%;
+    }
+    /*About*/
+    #aboutImg {
+        float: none;
     }
 }
