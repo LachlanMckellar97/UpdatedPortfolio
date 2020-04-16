@@ -30,6 +30,10 @@ body {
     background-color: rgb(180, 180, 180);
     align-items: center;
     color: ivory;
+    /* position: -webkit-sticky;
+    position: sticky !important; 
+    top: 0; */
+ 
 }
 #homeButton {
     font-size: larger;
@@ -91,6 +95,8 @@ body {
     padding: 0px 15px 15px 15px;
     float: left;
     overflow: auto;
+    height: 300px;
+    width: 300px;
 }
 #aboutInfo {
     padding-right: 15px;
@@ -98,11 +104,52 @@ body {
 
 /* Projects */
 #Projects {
-    background-color: hotpink;
+    width: 100%;
+}
+#projectHeader {
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.projectCards {
+    position: relative;
+    align-items: center;
 }
 .projectColumn {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.3%;
     float: left;
+}
+.projectImg {
+    height: 250px;
+    width: 250px;
+    position: relative;
+    border: solid 4px grey;
+    border-radius: 5px;
+}
+.projectImg:hover {
+    opacity: 80%;
+}
+.projectTitle {
+    position: absolute;
+    top: 110px;
+    font-size: larger;
+    font-weight: 600;
+    color: ivory;
+    opacity: 75%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: grey;
+}
+.githubLogo {
+    height: 30px;
+    width: 30px;
+    opacity: 75%;
+    position: relative;
+    top: -110px;
 }
 
 .clearfix::after {
@@ -151,10 +198,21 @@ body {
         font-size: 18px;
     }
     .projectColumn {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
     }
     /*About*/
     #aboutImg {
         float: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .projectColumn {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
     }
 }
